@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-表单标签-按钮</title>
+</head>
+<body>
+<form action="http：//baidu.com>
+<！--明文输入框-->
+账号：<input type="text" name="aa"><br>
+<！--暗文输入框-->
+密码： <input type="password"><br>
+
+<!--1定义一个普通按钮-->
+<!--作用：配合js完成一些操作-->
+<input type="button" value="我是按钮" onclick="alert（'lnj'）" >
+<!--给form标签的input的type类型设置为button value则输入按钮上你想显示的字 onclick是js语言-->
+
+<!--2定义一个图片按钮-->
+<!--作用：配合js完成一些操作-->
+<input type="image" src="C:\Users\dc16102111\.WebStorm2019.1\config\scratches\images\登陆.png">
+
+<!--3定义重置按钮-->
+<!--作用：清空表单中的数据-->
+<!--注意点：重置按钮有默认的按钮标题 默认叫做重置 也可以通过value属性来修改默认标题-->
+<input type="reset" value="清空">
+
+<!--4定义提交按钮-->
+<!--作用：将表单中的数据提升到远程服务器-->
+<!--注意点：要想把表单中的数据提交到远程服务器 必须满足两个条件：
+①告诉表单需要提交到哪个服务器 可以通过form标签的action属性来告诉表单 需要提交到哪个服务器
+②告诉表单 表单中哪些数据需要提交 只要设置name属性就会提交
+-->
+<input type="submit" name="aa"> <br>
+
+<!--5隐藏域的作用：悄悄咪咪的收集用户的一些数据 隐藏域是不会出现在界面中的-->
+<input type="hidden" name="cc" value="it666">
+
+<!--6默认情况下文字和输入框是没有关联关系的 也就是说 点击文字输入框不会聚焦
+如果想点击文字时让对应的输入框聚焦 那么就需要让文字和输入框进行绑定
+要想让输入框和文字绑定在一起 可以使用label标签
+绑定的格式：
+方法一：
+①将文字利用label标签包裹起来
+②给输入框添加一个id属性
+③在label标签中通过for属性和输入框 中的id进行绑定即可
+<label for="account">账号：</label><input type="text" id="account">
+-->
+<form action="http：//baidu.com>
+<label for="account">账号：</label><input type="text" id="account"><br>
+<label for="pwd">密码： </label><input type="password" id="pwd">
+</form>
+<!--方法二：-->
+<label>账号：<input type="text"></label>
+</body>
+</html>

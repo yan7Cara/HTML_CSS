@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>75-内边距属性</title>
+    <style>
+        div{
+            width: 98px;
+            height: 90px;
+            border: 1px solid black;
+            background-color: red;
+        }
+
+        .box1{
+            padding-top: 20px;
+        }
+
+        .box2{
+            padding-right: 40px;
+        }
+
+        .box3{
+            padding-bottom: 80px;
+        }
+
+        .box4{
+            padding-left: 120px;
+        }
+
+        .box5{
+            padding: 20px 40px 80px 160px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1内边距：边框和内容的距离
+2格式：
+①非连写
+padding-top::
+padding-right::
+padding-bottom::
+padding-left::
+②连写
+padding:上 右 下 左 ;
+3注意点：
+①连写时 省略时的规律：
+上 右 下 左→上 右 下：左边的取值和右边一样
+上 右 下 左→上 右：左边的取值和右边一样 上边的取值和下边一样
+上 右 下 左→上：右下左取值和上边一样
+②给标签设置内边距之后 标签占有的宽度和与高度会发生变化
+③内边距也会有背景颜色
+④增加了padding后元素的宽高也会发生变化
+⑤如果增加了padding之后还想保持元素的宽高 那么就必须减去内容的宽高
+-->
+<div class="box1">我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box2">我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box3">我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box4">我是文字我是文字我是文字我是文字我是文字我是文字</div>
+<hr>
+<div class="box5">我是文字我是文字我是文字我是文字我是文字我是文字</div>
+</body>
+</html>

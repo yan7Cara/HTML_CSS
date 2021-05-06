@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>73-边框属性</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*border:5px solid blue;*/
+
+            /*border-top:5px solid blue;*/
+            /*border-right: 15px dashed #000;*/
+            /*border-bottom: 25px dotted purple;*/
+            /*border-left: 35px double pink;*/
+
+            border-width: 5px 15px 25px 35px;
+            border-style: solid dashed dotted double;
+            border-color: blue black purple pink;
+        }
+    </style>
+</head>
+<body>
+<!--
+1什么是边框：环绕在标签宽度和高度周围的线条
+2边框属性的格式：
+①连写（同时设置四条边的边框）：
+border:边框宽度 边框样式 边框颜色;
+注意：
+a.颜色属性可以省略 省略之后默认是黑色
+b.样式属性不能省略 省略之后就看不到边框了
+c.宽度可以省略 省略之后还是可以看到边框
+②连写（分别设置四条边的边框）：
+border-top:边框宽度 边框样式 边框颜色;
+border-right:边框宽度 边框样式 边框颜色;
+border-bottom:边框宽度 边框样式 边框颜色;
+border-left:边框宽度 边框样式 边框颜色;
+边框样式：③连写（分别设置四条边的边框）：
+border-width：上 右 下 左;
+border-style：上 右 下 左;
+border-color：上 右 下 左;
+注意：
+a.这三个属性的取值是按照顺时针来赋值的 也就是按照上右下左来赋值的 而不是按照日常生活中的上下左右
+b.这三个属性的取值 省略时的规律：
+上 右 下 左→上 右 下：左边的取值和右边一样
+上 右 下 左→上 右：左边的取值和右边一样 上边的取值和下边一样
+上 右 下 左→上：右下左取值和上边一样
+④非连写（方向＋要素）：
+border-top-width:
+border-top-style:
+border-top-color:#000;
+border-right-width:
+border-right-style:
+border-right-color:#000;
+border-bottom-width:
+border-bottom-style:
+border-bottom-color:#000;
+border-left-width:
+border-left-style:
+border-left-color:#000
+3快捷键：
+输入bd+按下tab键 会自动出现border:1px solid #000;
+输入bt+按下tab键 会自动出现border-top:1px solid #000;
+输入br+按下tab键 会自动出现border-right:1px solid #000;
+输入bb+按下tab键 会自动出现border-bottom:1px solid #000;
+输入bl+按下tab键 会自动出现border-left:1px solid #000;
+输入bw按下tab键 会自动出现border-width:;
+4小技巧：
+①可以先设置整体 再设置局部 根据层叠性 同一个选择器 后面的边框属性会覆盖前面的边框属性
+②border-bottom:none;//不要底部边框 以后不想要哪条边框也可以这样设置 none就代表不需要边框
+注意：
+①增加了padding后元素的宽高也会发生变化
+②如果增加了padding之后还想保持元素的宽高 那么就必须减去内容的宽高
+-->
+<div class="box"></div>
+</body>
+</html>

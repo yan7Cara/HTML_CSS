@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            height: 100px;
+            width: 980px;
+        }
+
+        .headerleft{
+            width: 250px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+
+        .headerrighttop{
+            width: 150px;
+            height: 50px;
+            background-color: skyblue;
+            float:right;
+        }
+
+        .headerrightbottom{
+            width: 630px;
+            height: 50px;
+            background-color: purple;
+            float: right;
+        }
+
+        .content{
+            width: 980px;
+            height: 400px;
+            margin-top: 10px;
+        }
+
+        .contentleft{
+            width: 320px;
+            height: 400px;
+            background-color: yellow;
+            float: left;
+        }
+
+        .contentpink{
+            width: 400px;
+            height: 200px;
+            background-color: deeppink;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .contentright{
+            width: 240px;
+            height: 350px;
+            background-color: darkolivegreen;
+            float: right;
+        }
+
+        .contentblue{
+            width: 400px;
+            height: 140px;
+            background-color: deepskyblue;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .contentbottom{
+            width: 650px;
+            height: 40px;
+            background-color: green;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .footer{
+            margin-top: 10px;
+            width: 980px;
+            height: 40px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<!--
+在企业开发中 垂直方向上使用标准流 水平方向上使用浮动流
+
+拿到一个很复杂的界面如何入手：
+1从上至下布局
+2从外向内布局
+3水平方向可以先划分为一左一右 再对左边或者右边进行进一步布局
+-->
+<div class="header">
+    <div class="headerleft"></div>
+    <div class="headerrighttop"></div>
+    <div class="headerrightbottom"></div>
+</div>
+<div class="content">
+    <div class="contentleft"></div>
+    <div class="contentright"></div>
+    <div class="contentpink"></div>
+    <div class="contentblue"></div>
+    <div class="contentbottom"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

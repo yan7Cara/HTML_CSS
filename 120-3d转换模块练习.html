@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-top: 300px;
+            position: relative;
+            transform: rotateY(0deg) rotateX(0deg);
+            transform-style: preserve-3d;
+            animation: sport 5s linear 0s infinite normal;
+        }
+
+        li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotateX(90deg) translateZ(100px) scale(2,1);
+        }
+
+        ul li:nth-child(2){
+            background-color: green;
+            transform: rotateX(180deg) translateZ(100px) scale(2,1);
+        }
+
+        ul li:nth-child(3){
+            background-color: blue;
+            transform: rotateX(270deg) translateZ(100px) scale(2,1);
+        }
+
+        ul li:nth-child(4){
+            background-color: yellow;
+            transform: rotateX(360deg) translateZ(100px) scale(2,1);
+        }
+
+        ul li:nth-child(5){
+            background-color: purple;
+            transform: translateX(-200px) rotateY(90deg);
+        }
+
+        ul li:nth-child(6){
+            background-color: pink;
+            transform: translateX(200px) rotateY(90deg);
+        }
+
+        @keyframes sport {
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+
+        body{
+            perspective: 500px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="QQ图片20190929150601.jpg" alt=""></li>
+    <li><img src="QQ图片20190929150615.jpg" alt=""></li>
+    <li><img src="QQ图片20190929150620.jpg" alt=""></li>
+    <li><img src="QQ图片20190929150628.jpg" alt=""></li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格中的其他标签</title>
+</head>
+<body>
+<!--
+1表格标签中的caption标签用来专门设置表格的标题 使表格的标题位于表格中间 只要将标题写在caption标签中 那么标题就会自动相对于表格的宽度居中
+<table>
+<caption>
+        <h2>标题</h2>
+</caption>
+注意：①caption标签一定要写在table标签中 否则无效
+②caption 一定要紧跟在table标签后面
+2标题单元格标签：在表格标签中提供了一个标签专门用来存储每一列的标题 这个标签叫做th标签 只要当前列的标题存储在这个标签中就会自动居中加粗文字 把td换成th
+其实表格中有两种单元格 一种是td 一种是th td是专门用来存储数据的 th是专门用来存储当前列的标题的
+-->
+<table border="1" align="left" bgcolor="black" cellspacing="1" width="800px">
+    <caption><h1>今日小说排行榜</h1></caption>
+    <tr bgcolor="#a9a9a9" align="center">
+        <th>排名</th>
+        <th>关键词</th>
+        <th>趋势</th>
+        <th>今日搜索</th>
+        <th>最近七日</th>
+        <th>相关链接</th>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\up.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\up.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\down.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\down.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\up.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="images\up.png"></td>
+        <td>623997</td>
+        <td>4088311</td>
+        <td>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="https://baike.baidu.com/">百科</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .box3{
+            background-color: blue;
+        }
+
+        /*绝对定位中不区分块级元素 行内块级元素 行内元素*/
+        span{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+2绝对定位：相对于body来定位
+（1）格式：position:absolute;
+要配合top:;right:;left:;right:;来使用
+（2）注意：
+①绝对定位的元素是脱离标准流的
+②绝对定位的元素不区分块级元素 行内元素 行内块级元素
+③如果一个绝对定位的元素以body作为参考点 其实是以网页首屏（第一次看到网页的页面）的宽度和高度作为参考点
+而不是以整个网页的宽度和高度作为参考点
+④一个绝对定位的元素会忽略祖先元素的padding
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<span>我是span</span>
+</body>
+</html>

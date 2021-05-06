@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>55-属性选择器2</title>
+    <style>
+        /*img[alt^=abc]{  !*找到所有img标签 找到img标签中有alt属性 并且alt属性以abc开头的标签 设置他们的属性*!*/
+        /*    color:red;*/
+        /*}*/
+        /*前三个的属性都被改了*/
+
+        /*img[alt|=abc]{  !*只能找到"abc-"开头的标签 所以只有第二个的属性改了*!*/
+        /*    color:red;*/
+        /*}*/
+
+        /*img[alt$=abc]{  !*更改以abc结尾的alt标签的属性*!*/
+        /*    color:red;*/
+        /*}*/
+
+        /*img[alt*=abc]{  !*更改alt属性中包含abc内容的标签的属性*!*/
+        /*    color:red;*/
+        /*}*/
+
+        img[alt~=abc]{  /*只能找到abc是单独存在的 即被空格隔开的那些abc 更改这些标签的属性*/
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+3属性的取值是以什么开头的：
+[attribute|=value]    CSS2
+[attribute^=value]   CSS3
+区别：前者只能找到value开头 并且value是被-和其他内容隔开的 后者只要是以value开头的都可以找到 无论有没有被-隔开
+4属性的取值是以什么结尾的：
+[attribute$=value]   CSS3
+只掌握CSS3 了解CSS2
+-->
+<!--<img src="" alt="abcdef">-->
+<!--<img src="" alt="abc-www">-->
+<!--<img src="" alt="abc ppp">-->
+<!--<img src="" alt="defabc">-->
+<!--<img src="" alt="ppp abc">-->
+<!--<img src="" alt="www-abc">-->
+<!--<img src="" alt="qq">-->
+<!--<img src="" alt="yy">-->
+<!--
+属性的取值是否包含某个特定的值：
+[attribute~=value]    CSS2
+[attribute*=value]     CSS3
+区别：前者只能找到独立的单词 即包含value 而且value是被空格隔开的 后者只要是以value开头的都可以找到 无论有没有被隔开
+-->
+<img src="" alt="wwwabcmmm">
+<img src="" alt="www-abc-mmm">
+<img src="" alt="www abc mmm">
+<img src="" alt="qq">
+</body>
+</html>

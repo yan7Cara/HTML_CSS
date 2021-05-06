@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>122-背景图片定位区域属性</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            list-style:none;
+            width: 100px;
+            height: 100px;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            border: 20px dashed #000;
+            padding: 50px;
+            margin-left: 20px;
+            background: url("QQ图片20190929150628.jpg") no-repeat;
+        }
+
+        ul li:nth-child(2){
+            background-origin: padding-box;
+        }
+
+        ul li:nth-child(3){
+            background-origin: border-box;
+        }
+
+        ul li:nth-child(4){
+            background-origin: content-box;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+背景图片定位区域属性：告诉系统背景图片从什么区域开始显示
+1格式：background-origin:;
+2取值：
+①padding-box：默认取值 图片从padding（内边距）开始显示
+②border-box：图片从border（边框）开始显示
+③content-box：图片从content（内容）开始显示 
+-->
+<ul>
+    <li>默认</li>
+    <li>padding</li>
+    <li>border</li>
+    <li>contain</li>
+</ul>
+</body>
+</html>

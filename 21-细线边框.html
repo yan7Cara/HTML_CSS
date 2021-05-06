@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>细线边框</title>
+</head>
+<body>
+<!--
+1在表格标签中想通过指定外边距为0来实现细线表格是不靠谱的 其实他是讲两条线合并为了一条线 所以看上去很不舒服
+2细线表格的制作方式：①给table便签设置bgcolor="black"②给（所有）tr标签设置bgcolor="white"③给table便签设置cellspacing="1px"
+3table标签和tr标签和td标签都支持bgcolor属性
+-->
+<table bgcolor="black" cellspacing="1px">
+    <tr bgcolor="white">
+        <td>1.1</td>
+        <td>1.2</td>
+    </tr>
+    <tr bgcolor="white">
+        <td>2.1</td>
+        <td>2.2</td>
+    </tr>
+</table>
+</body>
+</html>

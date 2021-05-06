@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: green;
+            position: fixed;
+        }
+
+        .box3{
+            background-color: blue;
+        }
+
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: fixed;
+        }
+
+        .box4{
+            height: 2000px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<!--
+3固定定位
+（1）格式：position:fixed;
+要配合top:;right:;left:;right:;来使用
+（2）注意：
+①固定定位的元素是脱离标准流的 不会占用标准流中的空间
+②固定定位和绝对定位一样 不区分块级元素 行内元素 行内块级元素
+③固定定位的元素不会随着滚动条的滚动而滚动
+④IE6不支持固定定位
+4静态定位 ：一个元素 默认的就是静态定位
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<span>我是span</span>
+</body>
+</html>

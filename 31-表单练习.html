@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-表单练习</title>
+</head>
+<body>
+<form action="https://www.bilibili.com/video/av21212670/?p=50">
+    <fieldset>
+        <legend>注册界面</legend>
+        <table>
+    账号：<input type="text"> <br>
+</table>
+<table>
+    密码：<input type="password"> <br>
+</table>
+
+<!--默认情况下 性别选项框不会互斥 你可以多选 但是我们要求只能单选 所以我们需要给每个选项添加相同的name属性-->
+<table>
+    性别：<input type="radio" name="gender" value="male">男
+    <input type="radio" name="gender" value="female">女
+    <input type="radio" checked name="gender" value="yao">保密 <br>
+</table>
+<!--
+单选框和多选框中 所有选项的name属性的值必须一致
+还必须给每个选项添加value值 不然提交到服务器时只会显示gender=on 但是我们并不知道具体内容 是男是女
+-->
+<table>
+    爱好：<input type="checkbox" value="basketable">篮球
+    <input type="checkbox" value="football">足球
+    <input type="checkbox" checked value="sport">足浴 <br>
+</table>
+<table>
+    个人简介：
+    <textarea cols="30" rows="10">
+    </textarea> <br>
+</table>
+<table>
+    生日：<input type="date"> <br>
+</table>
+<table>
+    邮箱：<input type="email"> <br>
+</table>
+<table>
+    手机：<input type="number"> <br>
+</table>
+<input type="submit" value="注册">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="清空">
+    </fieldset>
+</form>
+</body>
+</html>

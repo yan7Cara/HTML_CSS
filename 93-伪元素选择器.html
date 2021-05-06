@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>93-伪元素选择器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div::before{
+            content: '爱你';
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+        }
+
+        div::after{
+            content: '么么哒';
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+        /*    隐藏添加的子元素*/
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--
+1伪元素选择器的作用：给指定标签的内容的前面/后面添加一个子元素
+2格式：
+（1）给指定标签的内容的前面添加一个子元素
+标签名称：：before{
+属性名称：值;}
+（2）给指定标签的内容的后面添加一个子元素
+标签名称：：after{
+属性名称：值;}1以后看到水平导航条 要想到用ul和li再加浮动做出来
+2想要多个盒子顶部对齐 最简单的方法就是 设置多个盒子同时浮动
+-->
+<div>我是文字</div>
+</body>
+</html>

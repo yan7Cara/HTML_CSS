@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>107-2d转换模块-形变中心点</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            /*transform-origin: 0px 0px;*/
+            /*transform-origin: 0% 0%;*/
+            transform-origin:left top;
+        }
+
+        li:nth-child(1){
+            background-color: red;
+            transform: rotate(30deg);
+        }
+
+        li:nth-child(2){
+            background-color: green;
+            transform: rotate(50deg);
+        }
+
+        li:nth-child(3){
+            background-color: blue;
+            transform: rotate(70deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+2d转换模块-形变中心点
+1默认情况下所有的元素都是以自己的中心点作为参考来旋转的 我们可以通过形变中心点属性来修改他的参考点
+2 更改中心点格式：
+transform-origin:0px 0px;//以自身图片左上角为中心点
+注意：
+①第一个参数：水平方向
+第二个参数：垂直方向
+②取值有三种方式：具体像素 百分比
+transform-origin:50% 50%;//以自身中心为中心点
+transform-origin:0% 0%;//以自身图片左上角为中心点
+③有一些特殊关键字：
+transform-origin:center center;//以自身中心为中心点
+transform-origin:left top;//以自身左上角为中心点
+-->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

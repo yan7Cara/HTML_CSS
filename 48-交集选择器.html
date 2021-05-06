@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48-交集选择器</title>
+    <style>
+        /*p.para1{*/
+        /*    color: red;*/
+        /*}
+        找到当前界面中 所有p标签 然后在p标签中找到所有类名叫para1的标签 将它的内容设置为红色字体
+        */
+
+        .para1#identity{
+            color: skyblue;
+        }
+    /*    找到当前界面中所有类名为para1的标签 然后在这些标签中找到id名为identity的标签 将他的内容设置为红色字体*/
+    </style>
+</head>
+<body>
+<!--
+1交集选择器的作用：给所有选择器选中的标签中 相交的那部分标签设置属性
+2格式：
+选择器1选择器2{
+属性：值;}
+2 注意：
+①选择器和选择器之间没有任何的连接符号
+②选择器可以使用标签名称/id名称/class名称
+③企业中不常用
+-->
+<p>我是段落</p>
+<p>我是段落</p>
+<p class="para1" id="identity">我是段落</p>
+<p class="para1">我是段落</p>
+<p>我是段落</p>
+</body>
+</html>

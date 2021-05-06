@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D转换模块</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid #000;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            transform: rotateY(0deg);
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid #000;
+            margin: 0 auto;
+            margin-top: 50px;
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+1什么是2d和3d：
+2d就是一个平面 只有宽度和高度 没有厚度 3d是一个立体 有宽度和高度 还有厚度 默认情况下所有的元素都是2d展现
+2如何让某个元素呈3d展现
+和透视一样 想看到某个元素的3d效果 只需要给他的父元素添加一个transform-style属性 然后设置为preserve-3d即可
+3transform-style有两个取值 一个是preserve-3d 一个是flat 这是2d模式 即默认取值
+4会做正方体以后 给正方体的每一个面设置scale属性 然后在把两个侧面移动一下 可以改成长方体
+5只要父元素被拉伸了 子元素也会被拉伸
+6设置background-size:cover;就可以让背景图片永远铺满浏览器窗口
+7动画中如果有和默认样式中同名的属性 会覆盖默认样式中同名的属性 在编写动画时 固定不变的值写在前面 需要变化的值写在后面
+-->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

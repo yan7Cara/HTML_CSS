@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMG标签</title>
+</head>
+<body>
+<!--
+1 img标签：
+作用：告诉浏览器我们需要显示一张图片
+格式：<img src="">输入img按下tab系统自动打出来
+其中src=""是img标签的属性 用来告诉img标签需要显示的图片名称是什么
+注意：
+①img标签不会独占一行
+②如果我们指定了图片的宽度和高度 可能会导致图片变形 如果又想指定高度宽度 又不想让图片变形 我们可以只指定高度或宽度 只要指定了宽度 系统会自动计算出高度 只要指定了高度 系统会自动计算出宽度 并且都是等比拉伸 不变形
+img标签中别的属性：
+①width：宽度
+②height：高度
+以上两个属性的作用：告诉img标签将来需要显示的图片有多宽多高 如果没有用这两个属性 则系统使用图片默认的高和宽 如果用了这两个属性 系统就按照指定的宽高来显示 
+例如：<img src="QRCode.jpg" width="300" height="478">
+③title：告诉浏览器 当鼠标悬停在图片上时 需要显示什么内容
+④alt：用于告诉浏览器 当需要显示的图片找不到时显示什么内容
+-->
+<img src="E:\正片\DSC_0089.jpg">
+<img src="E:\正片\DSC_0089.jpg" width="300" height="378">
+<img src="E:\正片\DSC_0089.jpg" width="100" height="378">
+<img src="E:\正片\DSC_0089.jpg" width="100">
+<img src="E:\正片\DSC_0089.jpg" height="178">
+<img src="E:\正片\DSC_0089.jpg" height="178" title="仙女下凡">
+<img src="E:\正片\0089" height="178" alt="找不到图片">
+
+</body>
+</html>

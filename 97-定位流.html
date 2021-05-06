@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>97-定位流</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+        
+        .box2{
+            background-color: green;
+            position: relative;
+            top: 20px;
+            left: 50px;
+        /*    给相对定位费元素设置margin/padding是设置给他移动前最开始的那个位置 而不是移动后/相对定位后的位置设置的
+              可以将下面两个语句注释和不注释观察效果        */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .box3{
+            background-color: blue;
+        }
+
+        /*相对定位中区分块级元素 行内块级元素 行内元素*/
+        span{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+定位流的分类
+1相对定位：相对于自己以前在标准流中的位置来移动
+（1）格式：position:relative;
+（2）注意：
+①相对定位不脱离标准流 会继续在标准流中占用一份空间
+②要配合top:;  right:;   left:;   right:;来使用 指定了上述四个的位置 他就会相对以前的位置进行上下左右的移动
+但是由于上下在同一直线上 左右是同一直线上 所以上下只能定义一个 左右也只能定义一个
+③因为相对是不脱离标准流的 所以在相对定位中区分块级元素 行内块级元素 行内元素
+④因为相对是不脱离标准流的 并且相对定位的元素会占用标准流中的位置 所以当给相对定位的元素设置margin/padding等属性时
+会影响到标准流的布局 也就是说你给相对定位费元素设置margin/padding是设置给他移动前最开始的那个位置 而不是移动后/相对定位后的位置设置的
+（3）相对定位的应用场景：
+①用于对元素进行微调 如果想让多个盒子对齐 可以使用相对丁文对盒子进行微调
+②配合后面学习的绝对定位来使用
+（4）相对定位弊端：
+相对定位不会脱离标准流 会继续在标准流中占用一份空间 所以不利于布局界面
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<span>我是span</span>
+</body>
+</html>

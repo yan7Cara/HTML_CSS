@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片和插入图片的区别</title>
+    <style>
+        div{
+            width: 150px;
+            height: 170px;
+        }
+        
+        .box1{
+            background-image: url(DSC_1750.jpg);
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+<!--
+1背景图片和插入图片的区别：
+①背景图片仅仅只是装饰 不会占用位置 插入图片会占用位置
+②背景图片有定位属性 可以控制图片位置 插入图片没有定位属性 控制图片的位置不太方便
+③插入图片的语意比背景图片的语意强 在企业开发中 如果你的图片想被搜索引擎收录 推荐使用插入图片
+-->
+<div class="box1">我是文字</div>
+<div class="box2">
+    <img src="DSC_1750.jpg" alt="">
+    我是文字
+</div>
+</body>
+</html>

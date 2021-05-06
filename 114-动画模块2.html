@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 40px;
+            background-color: red;
+            animation-name: lnj;
+            animation-duration:3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes lnj{
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                left: 300px;
+                top: 0;
+            }
+            50%{
+                left: 300px;
+                top: 300px;
+            }
+            75%{
+                top: 300px;
+                left: 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: blue;
+            animation-name: myRotate;
+            animation-duration: 5s;
+            /*animation-fill-mode:backwards;*/
+            /*animation-fill-mode:none;*/
+            /*animation-fill-mode:both;*/
+            animation-fill-mode:forwards;
+        }
+
+        @keyframes myRotate {
+            0%{
+                transform: rotate(10deg);
+            }
+            50%{
+                transform: rotate(50deg);
+            }
+            100%{
+                transform: rotate(70deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+⑧指定动画等待状态和结束状态的样式
+animation-fill-mode:backwards/none/both/forwards;
+none：不做任何改变
+backwards：等待状态显示动画第一帧的样子
+forwards： 结束状态显示动画最后一帧的样子
+both：等待状态小时动画第一帧的样子 结束状态显示动画最后一帧的样子
+3注意：动画有一定的状态：等待状态 执行状态 结束状态
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

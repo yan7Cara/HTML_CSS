@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 40px;
+            background-color: red;
+            animation-name: lnj;
+            animation-duration:3s;
+            animation-delay: 2s;
+            animation-timing-function:linear;
+            animation-iteration-count:3;
+            animation-direction:alternate;
+        }
+
+        div:hover{
+            animation-play-state:paused;
+        }
+
+        @keyframes lnj{
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+1过度和动画之间的异同：
+不同：过度必须人为的触发才会执行动画 动画不需要人为的触发就可以执行动画
+同：过度和动画都需要满足三要素才会有动画效果
+2动画三要素：
+①告诉系统需要执行哪个动画：
+animation-name:lnj;
+②告诉系统我们需要自己创建一个名称叫做lnj的动画：
+@keyframes lnj{
+from{}
+to{}
+}
+如果动画有很多个样式 要指定多个from to 百分号前面的数字依次递增就可以了
+@keyframes lnj{
+1%{}
+2%{}
+3%{}
+}
+③ 告诉系统动画持续的时长
+animation-duration:xs;//x表示具体数字 持续时长
+④告诉系统动画执行的速度：
+animation-timing-function:linear;
+⑤告诉系统动画执行的次数
+animation-iteration-count:infinite/具体数字（次数）;
+⑥告诉系统动画是否往返执行
+animation-direction:normal;//不往返执行 第二次仍然从起点开始执行 默认取值
+animation-direction:alternate;//往返执行 第二次从终点开始执行回来
+如果设置的是往返执行 那么 从起点到终点算一次 从终点返回起点算一次 一个来回算两次
+⑦告诉系统动画是运动还是静止
+animation-play-state:paused/running;
+running:执行动画
+paused:暂停动画
+
+4动画模块连写
+格式：
+animation：动画名称 动画时长 动画运动速度 延迟时间 执行次数 是否需要往返动画
+可以只写前两个参数
+-->
+<div></div>
+</body>
+</html>

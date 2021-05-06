@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>92-清除浮动方式3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            float: left;
+        }
+
+        .box1{
+            background-color: red;
+            /*不可以让第一个盒子使用margin-bottom属性*/
+            /*margin-bottom: 10px;*/
+        }
+
+        .box2{
+            background-color: green;
+            /*margin-top: 10px;*/
+        }
+
+        .box1 p{
+            width: 100px;
+            background-color: blue;
+        }
+
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .wall{
+            clear: both;
+        }
+
+        #h{
+            /*一般不设置第一个盒子的margin-bottom属性 也不给第二个盒子使用margin-top属性 而是设置额外添加的块级元素的高度*/
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--
+5清除浮动方式三-隔墙法：
+（1）外墙法
+先在两个盒子中间添加一个额外的块级元素 然后给这个额外添加的块级元素设置clear:both;属性
+注意：外墙法可以让第二个盒子使用margin-top属性 但是不可以让第一个盒子使用margin-bottom属性 可以直接设置额外添加的块级元素的高度
+（2）内墙法
+在第一个盒子中所有子元素的最后添加一个额外的块级元素 给这个额外添加的块级元素设置clear：both;属性
+注意：内墙法可以让第二个盒子使用margin-top属性 也可以让第一个盒子使用margin-bottom属性
+（3）外墙法和内墙法的区别：外墙法不能撑起第一个盒子的高度 而内墙法可以撑起第一个盒子的高度
+在企业开发中不常用隔墙法来清除浮动
+-->
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+<!--    内墙法：-->
+    <div class="wall"></div>
+</div>
+<!--外墙法：-->
+<!--<div class="wall" id="h"></div>-->
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

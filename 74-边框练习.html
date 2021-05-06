@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框练习</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            /*border:5px solid black;*/
+/*
+            border-top: 5px solid #000;
+            border-bottom: 5px solid #000;
+            border-right: 5px solid #000;
+            border-left: 5px solid #000;
+ */
+
+            /*
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+             */
+
+            border-top-width: 5px;
+            border-top-style: solid;
+            border-top-color: #000;
+            border-bottom-width: 5px;
+            border-bottom-style: solid;
+            border-bottom-color: #000;
+            border-left-width: 5px;
+            border-left-style: solid;
+            border-left-color: #000;
+            border-right-width: 5px;
+            border-right-style: solid;
+            border-right-color: #000;
+        }
+
+        .box2{
+            /*
+            border-top: 5px solid red;
+            border-bottom: 5px solid blue;
+            border-right: 5px solid green;
+            border-left: 5px solid purple;
+            */
+
+            /*
+            border-width: 5px;
+            border-style: solid;
+            border-color: red green blue purple;
+             */
+
+            border-top-width: 5px;
+            border-top-style: solid;
+            border-top-color: red;
+            border-bottom-width: 5px;
+            border-bottom-style: solid;
+            border-bottom-color: blue;
+            border-left-width: 5px;
+            border-left-style: solid;
+            border-left-color: purple;
+            border-right-width: 5px;
+            border-right-style: solid;
+            border-right-color: green;
+        }
+
+        .box3{
+            border:5px solid red;
+            border-right: 5px dashed red;
+        }
+    /*    同一个选择器中 后面的边框属性会覆盖前面的边框属性*/
+
+        .box4{
+            border:5px solid red;
+            border-style: solid dashed;
+        }
+
+        .box5{
+            border:5px solid black;
+            border-bottom: none;
+        }
+        /*none代表不需要边框*/
+        .box6{
+            width: 0px;
+            height: 0px;
+            border-width: 25px;
+            border-style: solid;
+            border-color: black white;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<!--div.box$*6按下tab键 自动生成以下代码-->
+<div class="box1"></div>
+<hr>
+<div class="box2"></div>
+<hr>
+<div class="box3"></div>
+<hr>
+<div class="box4"></div>
+<hr>
+<div class="box5"></div>
+<hr>
+<div class="box6"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路径问题</title>
+</head>
+<body>
+<!--
+1想给scr属性赋值有两种方式：
+①通过相对路径赋值
+相对路径：每次都从.html文件所在的文件夹开始查找
+a.同级：图片和.html文件存储在同一个文件夹中 格式：<img src="QRCode.jpg"> 含义：在.html文件所在的文件夹中查找名称叫做QRCode.jpg的图片
+b.下级： 存储图片的文件夹和.html文件在同一个文件夹中 例如. html文件和images文件夹在同一个文件夹 是同级关系 而QRCode.jpg在images文件夹里 格式：<img src="images/QRCode.jpg"> 含义：在.html文件所在的文件夹中找到名称为images的文件夹 然后再在images文件夹中找到名称叫做QRCode.jpg的图片
+c.上级：存储图片的位置和存储代码的文件夹在同一个文件夹中 例如.html文件存储在名为代码的文件夹里 代码文件夹和QRCode.JPG位于同一个文件夹 格式：<img src="../QRCode.jpg"> 含义：在.html文件所在的文件夹中找到这个文件夹的上一级文件夹 再在上一级文件夹中找到名为QRCode.jpg 其中../表示从当前的位置找到上一级文件夹
+②通过绝对路径赋值
+绝对路径：每次都从指定的盘符开始查找 格式：
+注意：
+①路径中不要出现中文 否则可能出现位置问题
+②如果通过相对路径来指定照片 就不能跨盘符
+③以后企业开发中如果需要编写路径 统一使用反斜杠/，不要用正斜杠\ 因为将来我们开发的程序可能会部署到其他操作系统的服务器上 而在其他操作系统中路径都是/ 所以如果你写的是\ 可能会引发问题
+④在企业开发中 一般不使用绝对路径 因为可移植性不好 也就是说将你写好的代码拷贝给别人 别人可能就不能运行了
+-->
+<img src="DSC_1750.jpg" width="100">
+<img src="images/DSC_1750.jpg"  width="100">
+<img src="../DSC_1750.jpg"  width="100">
+<img src="C:\Users\dc16102111\.WebStorm2019.1\config\scratches/DSC_1750.jpg"  width="100">
+</body>
+</html>

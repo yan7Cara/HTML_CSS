@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景定位</title>
+    <style>
+        div{
+            width: 1000px;
+            height: 1000px;
+        }
+        .box1{
+            background-image: url(DSC_1750.jpg);
+            background-repeat: no-repeat;
+            background-color: red;
+            /*background-position: right top;*/
+            background-position: 100px 200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1如何控制背景图片的位置：在CSS中有一个叫做background-position属性（background-position:水平方向 垂直方向）专门用于控制背景图片的位置
+2取值：
+①具体的方位名词：
+水平方向：left center right
+垂直方向：top center bottom
+background-position:left bottom;
+图片位于左下角
+②具体的像素：例如：background-position:100px 200px;
+注意：
+①一定要写单位px 否则无效
+②具体像素可以写负数 负数表示向左移出范围
+3应用场景：一把企业开发中 可以用它来使图片始终居中显示 无论是大分辨率还是小分辨率 大窗口还是小窗口 都能居中显示
+-->
+<div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签</title>
+</head>
+<body>
+<!--
+1a标签
+作用：控制页面与页面之间的跳转
+格式：<a hrcf="指定需要跳转的目标界面（目的地链接）">需要展现给用户查看的内容（点击这个内容才可以跳转）</a>
+注意：①a标签不仅可以让文字可以点击 还可以让图片也能够被点击 例如：<a hrcf="指定需要跳转的目标界面（目的地链接）"><img src-"QRCode.jpg"></a>
+②一个a标签必须有一个href属性 否则a标签不知道要跳转到什么地方
+③如果通过a标签的href属性指定一个URL地址 那么必须在前面加上http://或https://
+④a标签的href属性除了可以指定网络地址以外 还可以指定本地地址 例如：<a hrcf="test/demo/10路径练习.html">10路径练习.html</a>
+就会跳转到test文件下的demo文件夹下的10路径练习.html链接下的内容（相对路径的方法 test文件和这个使用a标签的.html文件在同一个文件夹 同级的关系）
+⑤a标签中有一个叫做target属性 专门用于控制如何跳转 该属性又有两个属性：
+_self：当前选项卡跳转 不新建界面跳转 默认为_self 例如：<a hrcf="指定需要跳转的目标界面（目的地链接）" target-"_self">需要展现给用户查看的内容（点击这个内容才可以跳转）</a>
+_blank：在新的选项卡中跳转 也就是新建界面跳转
+⑥标签还有一个title属性 该属性和img标签中的title一样 都是用来控制鼠标悬停时显示的提示文本的 例如： <a hrcf="指定需要跳转的目标界面（目的地链接）" target-"_self" title-"提示：会跳转哦">需要展现给用户查看的内容（点击这个内容才可以跳转）</a>
+-->
+<a href="https://www.bilibili.com/video/av21212670?p=24" title="b站李南江">b站李南江</a>
+<a href="https://www.bilibili.com/video/av21212670?p=24"><img src="C:\Users\dc16102111\.WebStorm2019.1\config\scratches\DSC_1750.jpg"></a>
+<a href="../04-H标签-P标签-HR标签.html" target="_self">04-H标签-P标签-HR标签</a>
+<a href="10-a标签.html" target="_blank">10-a标签</a>
+
+</body>
+</html>

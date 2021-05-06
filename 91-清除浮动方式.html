@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>91-清除浮动方式</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            float: left;
+        }
+
+        .box1{
+            background-color: red;
+            /*清除浮动方式一：给前面一个父元素设置高度*/
+            /*height: 20px;*/
+        }
+
+        .box2{
+            background-color: green;
+            /*3清楚浮动方式二：给后面的盒子添加clear属性*/
+            clear: both;
+            margin-top: 20px;/*无效*/
+        }
+
+        .box1 p{
+            width: 100px;
+            background-color: blue;
+        }
+
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+1清除浮动方式一：给前面一个父元素设置高度
+2在企业开发中 我们能不写高度就不写高度 所以这种方式用的很少
+3清楚浮动方式二：给后面的盒子添加clear属性
+clear属性取值：
+none:默认取值 按照浮动元素的排序规则来排序 左浮动找左浮动 右浮动找右浮动
+left:不要找前面的左浮动元素
+right:不要找前面的右浮动元素
+both: 不要找前面的左浮动元素和右浮动元素
+4注意点：当我们给某个元素添加clear属性后 该元素的margin属性会失效
+为什么margin属性会失效：box1中的p全部左浮动后 由于div没有高度 所以div没法被顶起来 所以box2会位于顶部
+如果给box2设置了margin-top属性 由于box2前面没有任何元素 所以box2的margin-top是相对于父元素（body）margin-top
+在这种情况下 如果父元素没有border属性 会和box2一起被顶下来 假设给父元素设置了边框 如果margin-top的值小于box1中p的高度
+在视觉上依旧没有margin-top的效果 因为margin-top的那段距离被浮动的box1中的p挡住了 所以必须要求margin-top的值大于box1中p的高度
+-->
+<!--div.box1>p{我是文字}*3-->
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+</div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+
+</body>
+</html>

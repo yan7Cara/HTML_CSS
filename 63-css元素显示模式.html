@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>63-css元素显示模式</title>
+    <style>
+        div{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        span{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1HTML将所有的标签分为两类 分别是容器级和文本级 CSS将所有标签分为两类 分别是块级元素和行内元素
+2块级元素：会独占一行 所有的容器级标签都是块级元素 p也是块级元素 如果没有设置宽度 那么就会和父元素一样宽
+如果设置了宽度 那么就按照设置的来显示
+行内元素：不会独占一行 除了p之外的所有文本级标签 如果没有设置宽度 那么默认和内容一样宽 行内元素不能程序员自己设置宽度和高度
+3行内块级元素： 为了能够让元素既能够不独占一行 又可以设置宽度和高度 那么就出现了行内块级元素 例如：img标签
+容器级标签：div h ul ol dl li dt dd
+文本级标签 ：span p buis stong em ins del
+块级元素：div h ul ol dl li dt dd p
+行内元素：span buis stong em ins del
+-->
+<div>我是div</div>
+<p>我是段落</p>
+<h1>我是标题</h1>
+<hr>
+<span>我是span</span>
+<b>我是加粗</b>
+<strong>我是强调</strong>
+<hr>
+<img src="C:\Users\dc16102111\.WebStorm2019.1\config\scratches\images\DSC_1750.jpg" alt="">
+<img src="C:\Users\dc16102111\.WebStorm2019.1\config\scratches\images\DSC_1750.jpg" alt="">
+</body>
+</html>

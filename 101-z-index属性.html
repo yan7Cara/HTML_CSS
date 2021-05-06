@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index属性</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .father1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            z-index: 2;/*先编写的蓝色的son1会盖住后编写的黄色的son2*/
+        }
+
+        .father2{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+        }
+
+        .son1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+
+        .son2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 50px;
+            left: 150px;/*后面编写的盖住了前面编写的*/
+        }
+    </style>
+</head>
+<body>
+<!--
+定位流的z-index属性
+1什么是z-index属性：默认情况下所有的元素都有一个默认的z-index属性 取值是0
+2z-index属性的作用：专门用于控制定位流元素的覆盖关系
+3默认情况下定位流的元素会盖住标准流的元素
+4默认情况下定位流的元素后面编写的会盖住前面编写的
+5如果定位流的元素设置了z-index属性 那么谁的z-index属性比较大 谁就是显示在上面
+6注意：
+①从父现象：如果两个元素的父元素都没有设置z-index属性 那么谁的z-index属性比较大 谁就显示在上面
+如果两个元素的父元素设置了z-index属性 那么子元素的z-index属性就会失效 也就是说谁的父元素的z-index属性比较大谁就会显示在上面
+-->
+<div class="father1">
+    <div class="son1"></div>
+</div>
+<div class="father2">
+    <div class="son2"></div>
+</div>
+
+</body>
+</html>

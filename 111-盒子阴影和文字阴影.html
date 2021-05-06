@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>111-盒子阴影和文字阴影</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px auto;
+            line-height: 200px;
+            text-align: center;
+            box-shadow: 10px 10px 10px 10px blue;
+            text-shadow: 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+<!--
+盒子阴影和文字阴影
+1如何给盒子添加阴影：
+box-shadow:水平偏移 垂直偏移 模糊度 阴影扩展 阴影颜色 内外阴影;
+内外阴影如果写inset就是内阴影 不写就是默认外阴影
+2注意：
+①盒子的阴影分为内阴影和外阴影 默认情况下是外阴影
+②可以只写前三个参数 阴影颜色默认情况下和盒子内的内容的字体颜色一样
+3如何给文字添加阴影：
+text-shadow:水平偏移 垂直偏移 模糊度 阴影颜色;
+用法同盒子阴影
+-->
+<div>我是盒子</div>
+</body>
+</html>

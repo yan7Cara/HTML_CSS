@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32-video标签</title>
+</head>
+<body>
+<!--
+1什么是video标签：播放视频
+2格式：
+<video src="">
+</video>
+3video标签的属性：
+src：告诉video标签需要播放的视频地址
+autoplay：告诉video标签是否需要自动播放视频
+controls=告诉video标签是否需要显示控制条
+poster：告诉video标签视频没有播放之前显示的占位图片
+loop：一般用于做广告视频 用来告诉video标签视频播放完毕之后是否需要循环播放
+preload：预加载视频 但是需要注意preload和autoplay想冲突 如果设置了autoplay属性 那么preload属性就会失效
+muted：静音
+width/height：和img标准中的一模一样
+例如：<video src=images/sb.webm" autoplay="autoplay" loop="loop" muted="muted" width="800px"></video>
+3video标签的第二种格式：
+<video>
+<source src="" type=""></source>
+<source src="" type=""></source>
+</video>
+由于视频数据非常重要 所以五大浏览器厂商都不愿意支持别人的视频格式 所以导致了没有一种视频格式是所有浏览器都支持的
+w3c为了解决这个问题 推出了第二种视频格式 video标签的第二种格式存在的意义就是为了解决浏览器适配的问题
+video元素支持三种视频格式 我们可以把这三种视频格式通过source标签指定给video标签 那么以后当浏览器播放视频时
+他就会从这三种中选择一种自己支持的格式来播放
+<video>
+<source src="images/sb.webm" type="video/webm"></source>
+<source src="images/sb.mp4" type="video/mp4"></source>
+<source src="images/sb.ogg" type="video/ogg"></source>
+</video>
+4注意：
+当前通过video标签的第二种格式虽然能够指定所有浏览器都支持的视频格式
+但是显然所有浏览器都通过video标签播放视频还有一个前提条件：浏览器必须支持HTML5标签 否则同样无法播放
+在过去的一些浏览器是不支持HTML5标签的 所以为了让过去的一些浏览器也能通过video标签播放视频
+以后我们可以通过js中名叫html5media的框架来实现
+-->
+</body>
+</html>

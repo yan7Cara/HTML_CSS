@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76-外边距属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+            background-color: red;
+        }
+
+        div{
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .box1{
+            margin-top: 20px;
+            margin-right: 40px;
+            margin-bottom: 80px;
+            margin-left: 160px;
+        }
+        .box2{
+            margin: 20px 40px 80px 160px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1外边距：标签与标签之间的距离
+2格式：
+①非连写：
+margin-top:
+margin-right:
+margin-left:
+margin-bottom:
+②连写：
+margin：上 右 下 左
+
+例如：
+<body>
+<span class="box1">我是span</span>
+<span class="box1">我是span</span>
+<span class="box1">我是span</span>
+</body>
+<style>
+span{
+display：inline-block;
+width:100px;
+height：100px;
+border：1px solid #000;
+</style>
+用浏览器打开后观察 再把代码改为：
+<body>
+<span class="box1">我是span</span><span class="box1">我是span</span><span class="box1">我是span</span>
+</body>
+用浏览器打开后观察 对比之后发现 HTML把回车当成空格显示了
+
+3注意点：外边距的那部分没有背景颜色
+-->
+<span class="box1">我是span</span>
+<span class="box2">我是span</span>
+<span class="box3">我是span</span>
+<div class="box4">我是div</div>
+</body>
+</html>

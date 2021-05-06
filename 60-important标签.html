@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>important标签</title>
+    <style>
+
+        #identity{
+            color: purple;
+        }
+        .para{
+            color: pink;
+        }
+        p{
+            color: green;
+        }
+        *{
+            color:red!important;
+            font-size:10px;
+        }
+        /*ul{*/
+        /*    color: blue!important;*/
+        /*}*/
+    /*    这段代码无效 因为important不能用于间接选择*/
+    </style>
+</head>
+<body>
+<!--
+1什么是important：用于提升某个直接选中标签的选择器中的某个属性的优先级 可以将被指定的属性的优先级提升为最高
+2注意点：
+①important只能用于直接选中 不能用于间接选中
+②important只能提升被指定22的属性的优先级 其他的属性的优先级不会被提升
+③important只能写到属性值分号; 前面
+④important前面的！不能省略
+我是段落会以红色字体 50px大小显示
+-->
+<ul>
+    <li>
+        <p id="identity" class="para">我是段落</p>
+    </li>
+</ul>
+</body>
+</html>

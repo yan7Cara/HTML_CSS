@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>94-清除浮动方式4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            float: left;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: green;
+        }
+
+        .box1 p{
+            width: 100px;
+            background-color: blue;
+        }
+
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .box1::after{
+            /*设置添加的子元素的内容为空*/
+            content: '';
+            /*设置添加的子元素为块级元素*/
+            display: block;
+            /*设置添加的子元素的高度为0*/
+            height: 0;
+            /*设置添加的子元素看不见*/
+            visibility: hidden;
+            /*给添加的子元素设置clear: both;属性*/
+            clear: both;
+        }
+
+        /*这个方法在IE6浏览器上没有效果 因为这个方法的兼容性低 添加上以下代码可以兼容IE6*/
+        .box1{
+            *zoom:1;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+</div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

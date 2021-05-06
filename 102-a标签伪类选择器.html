@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>102-a标签伪类选择器</title>
+    <style>
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: green;
+        }
+        /*
+        以上代码可以简写为：
+        a{
+            color:green;
+         }
+        */
+
+        a:active{
+            color: blue;
+        }
+
+        a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<!--
+1 我们发现a标签有一定的状态：
+①默认状态 从未被访问过
+②被访问过的状态
+③鼠标长按状态
+④鼠标悬停在a标签上的状态
+2a标签的伪类选择器：专门用来修改a标签不同状态的样式的
+3格式：
+a：link{};：修改从未被访问过状态下的样式
+a：visited{};：修改被访问过的状态下的样式
+a：active{};：修改鼠标长按状态下的样式
+a：hover{};：修改鼠标悬停在a标签的上的状态的样式
+4注意：
+①a标签的伪类选择器可以单独出现 也可以一起出现
+②如果一起出现 就有严格的顺序要求：先编写link 再编写visited 再编写hover 再编写active 否则 可能无效 记住爱恨原则 love hate 即 lvha
+③如果默认状态的样式和被访问过状态的样式一样 那么可以缩写：
+a{};
+后面再写a：hover{};或者其他
+④在企业开发中编写a标签的伪类选择器最好写在标签选择器的后面
+⑤在企业开发中 和a标签盒子相关的属性都写在标签选择器中（显示模式/宽度/高度/padding/margin）
+⑥在企业开发中 和a标签文字/背景相关的都写在伪类选择器中
+⑦hover这个伪类选择器除了可以用在a标签上 还可以用在其他的任何标签上
+-->
+<a href=http://"www.taobao.com">taobao</a>
+<a href="http://www.jd.com">jd</a>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>99-绝对定位参考点问题</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: relative;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+        }
+
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<!--
+（3）绝对定位参考点问题：
+①默认情况下 所有绝对定位元素无论有没有祖先元素（父级元素 爷爷级元素 爷爷的爸爸级元素…） 都会以body作为参考点
+②如果一个绝对定位的元素有祖先元素 并且祖先元素也是定位流 那么这个绝对定位的元素就会以定位流的那个祖先元素作为参考点
+例如：盒子2嵌套在盒子1中 如果盒子1设置了除静态定位外的别的定位流（相对 绝对 固定） 盒子2设置了绝对定位
+（假设设置的是定位到左下方） 那么盒子2就会移动到盒子1的左下角 而不是body的左下角
+③如果一个绝对定位的元素有祖先元素 并且祖先元素也是定位流 而且祖先元素中有多个元素都是定位流
+那么这个绝对定位的元素会以离他最近的那个定位流的祖先元素为参考点
+（4）应用场景
+“子绝父相”可以避免绝对定位和相对定位的弊端
+以后你看到一张图片位于另外一张图片上面 要想到定位流 想到子绝父相
+（5）绝对定位弊端：
+默认情况下绝对定位的元素会以body作为参考点 所以会随着浏览器的宽度高度的变化而变化
+（6）如何让绝对定位元素的水平居中：
+只需要设置绝对定位元素的left:50%;//永远保持占浏览器窗口的50%
+然后再设置绝对定位元素的margin-left:-（元素宽度的一半）px;
+-->
+<div class="box1">
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+</div>
+</body>
+</html>
